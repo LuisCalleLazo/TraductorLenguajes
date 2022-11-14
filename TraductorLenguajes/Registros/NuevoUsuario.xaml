@@ -1,0 +1,69 @@
+﻿<Window x:Class="TraductorLenguajes.Registros.NuevoUsuario"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TraductorLenguajes.Registros"
+        mc:Ignorable="d"
+        Title="NuevoUsuario"
+        MaxHeight="450" MaxWidth="800"
+        MinHeight="450" MinWidth="800"
+        WindowStartupLocation="CenterScreen">
+    
+    <Grid Background="#000">
+        <Label Content="Crear cuenta" HorizontalAlignment="Left" Margin="287,10,0,0" FontSize="40"
+               VerticalAlignment="Top" Height="73" Width="269" Foreground="#fff"/>
+
+        <!-- Datos del Usuario-->
+        <Label Content="Nombres:" HorizontalAlignment="Left" Margin="31,114,0,0"
+               VerticalAlignment="Top" Width="81" Foreground="#ddd" FontSize="15"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="128,121,0,0" x:Name="nombres"
+                 TextWrapping="Wrap" VerticalAlignment="Top" Width="229"/>
+
+        <Label Content="Apellidos:" HorizontalAlignment="Left" Margin="31,179,0,0"
+            VerticalAlignment="Top" Width="81" Foreground="#ddd" FontSize="15"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="128,186,0,0" x:Name="apellidos"
+            TextWrapping="Wrap" VerticalAlignment="Top" Width="229"/>
+
+        <Label Content="Email:" HorizontalAlignment="Left" Margin="54,239,0,0"
+            VerticalAlignment="Top" Width="48" Foreground="#ddd" FontSize="15"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="128,246,0,0" x:Name="email"
+            TextWrapping="Wrap" VerticalAlignment="Top" Width="229"/>
+
+        <CheckBox Content="¿Deseas colaborar con el proyecto?" HorizontalAlignment="Left" Margin="75,309,0,0" 
+                  VerticalAlignment="Top" Width="213" Height="16" Foreground="#ddd"/>
+
+        <!--Datos de Login-->
+
+        <Label Content="Nombre de usuario:" HorizontalAlignment="Left" Margin="434,93,0,0"
+            VerticalAlignment="Top" Width="152" Foreground="#ddd" FontSize="15"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="434,128,0,0" x:Name="nameUser"
+            TextWrapping="Wrap" VerticalAlignment="Top" Width="238"/>
+
+        <Label Content="Contraseña:" HorizontalAlignment="Left" Margin="434,165,0,0"
+            VerticalAlignment="Top" Width="93" Foreground="#ddd" FontSize="15"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="434,200,0,0" x:Name="txtPass"
+            TextWrapping="Wrap" VerticalAlignment="Top" Width="238" Visibility="Hidden"/>
+        <PasswordBox HorizontalAlignment="Left" Margin="434,200,0,0" VerticalAlignment="Top"
+                     Width="238" Height="23" x:Name="passw"/>
+
+        <Label Content="Repetir contraseña:" HorizontalAlignment="Left" Margin="434,246,0,0"
+            VerticalAlignment="Top" Width="140" Foreground="#ddd" FontSize="15"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="434,281,0,0" x:Name="txtPassConf"
+            TextWrapping="Wrap" VerticalAlignment="Top" Width="238"  Visibility="Hidden"/>
+        <PasswordBox HorizontalAlignment="Left" Margin="434,281,0,0" VerticalAlignment="Top" 
+                     Width="238" Height="23" x:Name="passConf"/>
+
+        <CheckBox Content="Mostrar Contraseñas" HorizontalAlignment="Left" Margin="434,327,0,0" 
+            Checked="MostrarContra" Unchecked="OcultarContra" VerticalAlignment="Top" Width="213" 
+            Height="16" Foreground="#ddd" x:Name="MostrarOcultar"/>
+        
+        <Button Content="Cancelar" HorizontalAlignment="Left" Margin="520,378,0,0" VerticalAlignment="Top" Width="105" 
+                RenderTransformOrigin="0.027,0.6" Height="25" Click="Cancelar"/>
+        
+        <Button Content="Crear Cuenta" HorizontalAlignment="Left" Margin="659,378,0,0" VerticalAlignment="Top" Width="105" 
+                RenderTransformOrigin="0.027,0.6" Height="25" Click="CrearCuenta"/>
+
+
+    </Grid>
+</Window>

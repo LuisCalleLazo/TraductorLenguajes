@@ -1,0 +1,83 @@
+﻿<Window x:Class="Usuarios.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Usuarios"
+        mc:Ignorable="d"
+        Title="MainWindow"
+        Height="450" Width="800"
+        MinHeight="450" MinWidth="800"
+        WindowStartupLocation="CenterScreen">
+
+    <Grid Background="#700">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Grid Grid.Column="0">
+                <Label Content="Usuario:" HorizontalAlignment="Left" Margin="0,3,0,0" Foreground="#eee"
+               VerticalAlignment="Center" Height="47" Width="396" FontSize="20" x:Name="CampoUsuario"/>
+            </Grid>
+
+            <Grid Grid.Column="1">
+                <Button Click="AbrirTraductor" Width="140" RenderTransformOrigin="0.836,0.533"
+                VerticalAlignment="Center" HorizontalAlignment="Right" Height="26" Margin="0,14,10,10">
+                    Abrir Traductor
+                </Button>
+            </Grid>
+
+        </Grid>
+        
+        <!-- _______________________ Navegacion ________________________-->
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Grid Grid.Column="0" Background="#333" x:Name="infoPa">
+                <Button Background="Black" Foreground="#ddd" HorizontalContentAlignment="Center" x:Name="info"
+                       VerticalContentAlignment="Center" Click="info_Click" BorderBrush="Gray" BorderThickness="0.8">
+                    INFORMACIÓN
+                </Button>
+            </Grid>
+
+            <Grid Grid.Column="1" Background="#666">
+                <Button Background="Black" Foreground="#ddd" HorizontalContentAlignment="Center" x:Name="acces_lang"
+                       VerticalContentAlignment="Center" Click="acces_lang_Click" BorderBrush="Gray" BorderThickness="0.8">
+                    LENGUAJES
+                </Button>
+            </Grid>
+
+            <Grid Grid.Column="2" Background="#333">
+                <Button Background="Black" Foreground="#ddd" HorizontalContentAlignment="Center" x:Name="comunidad"
+                       VerticalContentAlignment="Center" Click="comunidad_Click" BorderBrush="Gray" BorderThickness="0.8">
+                    DATOS DE USUARIO
+                </Button>
+            </Grid>
+
+            <Grid Grid.Column="3" Background="#333">
+                <Button Background="Black" Foreground="#ddd" HorizontalContentAlignment="Center" x:Name="configuraciones"
+                       VerticalContentAlignment="Center"  Click="configuraciones_Click" BorderBrush="Gray" BorderThickness="0.8">
+                    CONFIGURACIONES
+                </Button>
+            </Grid>
+        </Grid>
+
+        <!-- ___________________________ Espacio de las paginas ____________________ -->
+        <Grid Grid.Row="2" x:Name="GridCont">
+            <Frame x:Name="DataFrame" NavigationUIVisibility="Hidden"></Frame>
+        </Grid>
+    </Grid>
+</Window>
